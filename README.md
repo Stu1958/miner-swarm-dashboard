@@ -15,13 +15,13 @@
 ---
 
 ## ✨ Why Choose Miner Swarm Dashboard?
-- **Instant Awareness:** See exactly which miners are hashing and which are down with a single glance at your desk. 
-- **Standalone Convenience:** No PC or phone required. Once flashed, it lives on your desk as an always-on hardware monitor.
-- **Scalable Monitoring:** Flash multiple displays to keep a dashboard in every room of your house or office.
+- **Instant Fleet View:** See instantly that all your miners are hashing correctly without needing a phone or PC.
+- **Always-On Monitoring:** Lives on your desk as a standalone monitor—no browser logins or dashboards to open.
+- **Multi-Room Support:** Flash multiple displays to keep a monitor in your office, workshop, or kitchen.
 - **Avalon Optimized:** Specifically designed to save "Best Difficulty" stats for Avalon Nano 3/3S—a feature not found in standard monitors.
 
 ## 📏 App Setup Naming
-**IMPORTANT:** When entering your miner names during the setup, follow these rules to ensure the correct hardware logic is applied. (8 characters max).
+**IMPORTANT:** When entering your miner names during setup, follow these rules to ensure the correct hardware logic is applied (8 characters max).
 
 | Target Hardware | App Name Requirement | Example |
 | :--- | :--- | :--- |
@@ -35,6 +35,11 @@ This firmware is provided free of charge. If it helps you manage your mining swa
 
 - [☕ Buy Me a Coffee](https://buymeacoffee.com/stuartbinnz)
 - [💸 PayPal Donation](https://www.paypal.com/paypalme/stub1958)
+
+## ⚖️ Legal & Usage Policy
+**© 2026 Stu1958. All Rights Reserved.**
+
+This firmware is for **personal, non-commercial use only**. You may NOT pre-flash hardware with this software for resale on platforms like eBay or Etsy. Commercial licensing is required for hardware vendors.
 
 ---
 *Created by Stu1958. Not affiliated with Avalon or Bitaxe.*
