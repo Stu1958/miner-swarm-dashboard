@@ -9,32 +9,41 @@
         :root { --accent: #f3ba2f; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --success: #238636; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
         .container { max-width: 750px; width: 100%; }
-        .header { text-align: center; padding: 40px 0 20px 0; }
-        h1 { color: white; margin: 0; font-size: 2.5rem; letter-spacing: -1px; }
-        .badge-row { margin-top: 12px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-        .badge { color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.1); }
+        .header { text-align: center; padding: 30px 0 10px 0; }
+        h1 { color: white; margin: 0; font-size: 2.2rem; letter-spacing: -1px; }
+        .badge-row { margin-top: 10px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .badge { color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.1); }
         
-        .preview-img { display: block; width: 100%; max-width: 500px; margin: 20px auto; border-radius: 12px; border: 1px solid #30363d; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        /* COMPACT IMAGE SETTINGS */
+        .preview-img { 
+            display: block; 
+            width: 100%; 
+            max-width: 280px; 
+            margin: 15px auto 25px auto; 
+            border-radius: 10px; 
+            border: 1px solid #30363d; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5); 
+        }
 
-        .card { background: var(--card); border: 1px solid #30363d; border-radius: 12px; padding: 30px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+        .card { background: var(--card); border: 1px solid #30363d; border-radius: 12px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
         .install-box { text-align: center; border: 2px solid var(--accent); position: relative; }
-        .install-box::before { content: "FIRMWARE FLASHER"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: black; padding: 2px 15px; font-size: 0.7rem; font-weight: bold; border-radius: 4px; }
+        .install-box::before { content: "FIRMWARE FLASHER"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: black; padding: 2px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 4px; }
         
         .contribution-card { background: linear-gradient(145deg, #161b22, #1c2128); border: 1px solid var(--accent); text-align: center; }
-        .contribution-card h3 { color: var(--accent); margin-top: 0; }
+        .contribution-card h3 { color: var(--accent); margin-top: 0; margin-bottom: 10px; }
         
-        .btn-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
-        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: all 0.2s; display: inline-flex; align-items: center; font-size: 0.9rem; }
+        .btn-group { display: flex; gap: 12px; justify-content: center; margin-top: 15px; flex-wrap: wrap; }
+        .btn { padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: all 0.2s; display: inline-flex; align-items: center; font-size: 0.85rem; }
         .btn-paypal { background: #ffffff; color: #0070ba; border: 1px solid #0070ba; }
         .btn-coffee { background: #ffdd00; color: #000000; }
         .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
 
-        .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
+        .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px; }
         @media (max-width: 600px) { .rules-grid { grid-template-columns: 1fr; } }
-        .rule-item { background: #0d1117; padding: 15px; border-radius: 8px; border: 1px solid #30363d; font-size: 0.9rem; }
-        code { color: var(--accent); font-family: 'Courier New', Courier, monospace; font-size: 1.1em; background: rgba(0,0,0,0.3); padding: 2px 4px; border-radius: 4px; }
+        .rule-item { background: #0d1117; padding: 12px; border-radius: 8px; border: 1px solid #30363d; font-size: 0.85rem; }
+        code { color: var(--accent); font-family: monospace; font-size: 1.05em; background: rgba(0,0,0,0.3); padding: 2px 4px; border-radius: 4px; }
         
-        .footer { margin-top: 40px; font-size: 0.8rem; color: #8b949e; text-align: center; }
+        .footer { margin-top: 30px; font-size: 0.75rem; color: #8b949e; text-align: center; }
     </style>
 </head>
 <body>
@@ -42,8 +51,8 @@
         <div class="header">
             <h1>Miner Swarm Dashboard ⛏️</h1>
             <div class="badge-row">
-                <span class="badge" style="background: #238636;">Free Community Firmware</span>
-                <span class="badge" style="background: #8957e5;">No-Cost Project</span>
+                <span class="badge" style="background: #238636;">Free Firmware</span>
+                <span class="badge" style="background: #8957e5;">Community Project</span>
                 <span class="badge" style="background: #218bff;">v1.1 Stable</span>
             </div>
         </div>
@@ -52,24 +61,24 @@
 
         <div class="card install-box">
             <h3>⚡ Instant Web Installer</h3>
-            <p>Flash your ESP32-CYD directly from the browser. Connect via USB, hold <b>BOOT</b>, tap <b>RESET</b>, then click below.</p>
+            <p>Connect your ESP32-CYD via USB. Hold <b>BOOT</b>, tap <b>RESET</b>, then click below to flash.</p>
             <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
         </div>
 
         <div class="card">
             <h3>📏 App Setup Naming (8 Chars Max)</h3>
-            <p>When adding miners in the app setup, use these names to apply the correct logic. Names are case-insensitive.</p>
+            <p>When naming miners in the app setup, use these rules to apply the correct logic. Case-insensitive.</p>
             <div class="rules-grid">
-                <div class="rule-item"><b>Avalon 3S:</b> Use <code>NANO</code> & <code>3S</code> in name</div>
-                <div class="rule-item)<b>Avalon 3:</b> Use <code>NANO</code> & <code>3</code> in name</div>
+                <div class="rule-item"><b>Avalon 3S:</b> Use <code>NANO</code> & <code>3S</code></div>
+                <div class="rule-item"><b>Avalon 3:</b> Use <code>NANO</code> & <code>3</code></div>
                 <div class="rule-item"><b>N-Series:</b> MUST start with <code>NX</code> or <code>NQ</code></div>
-                <div class="rule-item"><b>Bitaxe/Other:</b> Use any other name (e.g. <code>RIG_01</code>)</div>
+                <div class="rule-item"><b>Bitaxe/Other:</b> Any other name (e.g. <code>RIG_01</code>)</div>
             </div>
         </div>
 
         <div class="card contribution-card">
             <h3>❤️ Support the Project</h3>
-            <p>This firmware is provided free for the mining community. If you find it helpful, please consider a contribution to support ongoing updates and hardware testing.</p>
+            <p>This firmware is provided free for the community. If you find it helpful, please consider a contribution to support ongoing updates.</p>
             <div class="btn-group">
                 <a href="https://www.paypal.com/paypalme/stub1958" target="_blank" class="btn btn-paypal">Donate via PayPal</a>
                 <a href="https://buymeacoffee.com/stuartbinnz" target="_blank" class="btn btn-coffee">☕ Buy Me a Coffee</a>
