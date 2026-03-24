@@ -1,6 +1,8 @@
 # ⛏️ Miner Swarm Dashboard (ESP32 CYD)
 
-![Dashboard Preview](dashboard-preview.jpg)
+<p align="center">
+  <img src="dashboard-preview.jpg" alt="Dashboard Preview" width="280">
+</p>
 
 ![Hardware: ESP32-CYD](https://img.shields.io/badge/Hardware-ESP32--CYD-blue)
 ![Price: Free](https://img.shields.io/badge/Price-Free--to--use-green)
@@ -13,7 +15,7 @@
 ---
 
 ## ✨ Features
-- **Fleet Monitoring:** Track up to 8 miners on one 2.8" touchscreen.
+- **Fleet Monitoring:** Track up to 8 miners simultaneously on one 2.8" touchscreen.
 - **Hardware Optimized:** Custom-built for the **Cheap Yellow Display (ESP32-CYD)**.
 - **Avalon Persistence:** Saves "Best Difficulty" stats to memory for Avalon Nano 3/3S.
 - **Dynamic Logic:** Automatically adjusts display layout based on the miner name.
