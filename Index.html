@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Miner Swarm Dashboard | Web Installer</title>
+    <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js"></script>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: white; text-align: center; padding: 50px; }
+        .card { background: #1e1e1e; padding: 20px; border-radius: 10px; border: 1px solid #333; max-width: 600px; margin: 20px auto; text-align: left; }
+        .warning { color: #f3ba2f; font-weight: bold; }
+        .install-btn { margin: 20px; }
+        a { color: #f3ba2f; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Miner Swarm Dashboard ⛏️</h1>
+    <p>Always-on monitoring for your mining fleet.</p>
+
+    <div class="card">
+        <h3>⚡ One-Click Install</h3>
+        <p>1. Connect your CYD to USB.</p>
+        <p>2. Hold <b>BOOT</b>, press <b>RESET</b>, then release <b>BOOT</b>.</p>
+        <esp-web-install-button manifest="manifest.json" class="install-btn"></esp-web-install-button>
+    </div>
+
+    <div class="card">
+        <h3>📏 Naming Rules (Capitals OK!)</h3>
+        <p class="warning">Max 8 Characters per name.</p>
+        <ul>
+            <li><b>Avalon Nano 3S:</b> Must contain <code>NANO</code> and <code>3S</code>[cite: 23, 24].</li>
+            <li><b>Avalon Nano 3:</b> Must contain <code>NANO</code> and <code>3</code>[cite: 24].</li>
+            <li><b>N-Series:</b> Must START with <code>NX</code> or <code>NQ</code>[cite: 23].</li>
+            <li><b>Others:</b> Standard Bitaxe logic[cite: 24].</li>
+        </ul>
+    </div>
+
+    <p>Support the project: 
+        <a href="https://www.paypal.com/paypalme/stub1958">PayPal</a> | 
+        <a href="https://buymeacoffee.com/stuartbinnz">Buy Me a Coffee</a>
+    </p>
+</body>
+</html>

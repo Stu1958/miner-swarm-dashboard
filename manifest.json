@@ -1,0 +1,11 @@
+{
+  "name": "Miner Swarm Dashboard",
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        { "path": "swarm_base.bin", "offset": 0 }
+      ]
+    }
+  ]
+}
