@@ -14,35 +14,26 @@
         .badge-row { margin-top: 10px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
         .badge { color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.1); }
         
-        /* COMPACT IMAGE SETTINGS */
-        .preview-img { 
-            display: block; 
-            width: 100%; 
-            max-width: 280px; 
-            margin: 15px auto 25px auto; 
-            border-radius: 10px; 
-            border: 1px solid #30363d; 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5); 
-        }
+        .preview-img { display: block; width: 100%; max-width: 280px; margin: 15px auto 25px auto; border-radius: 10px; border: 1px solid #30363d; box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
 
         .card { background: var(--card); border: 1px solid #30363d; border-radius: 12px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
         .install-box { text-align: center; border: 2px solid var(--accent); position: relative; }
         .install-box::before { content: "FIRMWARE FLASHER"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: black; padding: 2px 12px; font-size: 0.65rem; font-weight: bold; border-radius: 4px; }
         
+        .benefit-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        @media (max-width: 600px) { .benefit-list { grid-template-columns: 1fr; } }
+        .benefit-item { background: rgba(243, 186, 47, 0.05); border: 1px solid rgba(243, 186, 47, 0.1); padding: 15px; border-radius: 8px; font-size: 0.9rem; }
+        .benefit-item b { color: var(--accent); display: block; margin-bottom: 5px; }
+
         .contribution-card { background: linear-gradient(145deg, #161b22, #1c2128); border: 1px solid var(--accent); text-align: center; }
-        .contribution-card h3 { color: var(--accent); margin-top: 0; margin-bottom: 10px; }
-        
         .btn-group { display: flex; gap: 12px; justify-content: center; margin-top: 15px; flex-wrap: wrap; }
         .btn { padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: all 0.2s; display: inline-flex; align-items: center; font-size: 0.85rem; }
         .btn-paypal { background: #ffffff; color: #0070ba; border: 1px solid #0070ba; }
         .btn-coffee { background: #ffdd00; color: #000000; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
-
+        
         .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px; }
-        @media (max-width: 600px) { .rules-grid { grid-template-columns: 1fr; } }
         .rule-item { background: #0d1117; padding: 12px; border-radius: 8px; border: 1px solid #30363d; font-size: 0.85rem; }
         code { color: var(--accent); font-family: monospace; font-size: 1.05em; background: rgba(0,0,0,0.3); padding: 2px 4px; border-radius: 4px; }
-        
         .footer { margin-top: 30px; font-size: 0.75rem; color: #8b949e; text-align: center; }
     </style>
 </head>
@@ -59,15 +50,25 @@
 
         <img src="dashboard-preview.jpg" alt="Miner Swarm Dashboard Preview" class="preview-img">
 
+        <div class="card">
+            <h3>🖥️ Why a Dedicated Dashboard?</h3>
+            <div class="benefit-list">
+                <div class="benefit-item"><b>Instant Fleet View</b> See at a glance that all 8 miners are hashing without touching your phone.</div>
+                <div class="benefit-item"><b>Always-On Monitoring</b> No need to log into a PC or open a browser to check your status.</div>
+                <div class="benefit-item"><b>Multi-Room Support</b> Set one up in your office, kitchen, or workshop to keep an eye on the swarm anywhere.</div>
+                <div class="benefit-item"><b>Zero Latency</b> Real-time updates directly from your miners to your desk.</div>
+            </div>
+        </div>
+
         <div class="card install-box">
             <h3>⚡ Instant Web Installer</h3>
-            <p>Connect your ESP32-CYD via USB. Hold <b>BOOT</b>, tap <b>RESET</b>, then click below to flash.</p>
+            <p>Flash your ESP32-CYD via USB. Hold <b>BOOT</b>, tap <b>RESET</b>, then click below to flash.</p>
             <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
         </div>
 
         <div class="card">
             <h3>📏 App Setup Naming (8 Chars Max)</h3>
-            <p>When naming miners in the app setup, use these rules to apply the correct logic. Case-insensitive.</p>
+            <p>Use these rules in the app setup to enable custom hardware logic. Case-insensitive.</p>
             <div class="rules-grid">
                 <div class="rule-item"><b>Avalon 3S:</b> Use <code>NANO</code> & <code>3S</code></div>
                 <div class="rule-item"><b>Avalon 3:</b> Use <code>NANO</code> & <code>3</code></div>
@@ -78,16 +79,14 @@
 
         <div class="card contribution-card">
             <h3>❤️ Support the Project</h3>
-            <p>This firmware is provided free for the community. If you find it helpful, please consider a contribution to support ongoing updates.</p>
+            <p>This firmware is provided free. If it helps your mining operation, please consider a contribution.</p>
             <div class="btn-group">
                 <a href="https://www.paypal.com/paypalme/stub1958" target="_blank" class="btn btn-paypal">Donate via PayPal</a>
                 <a href="https://buymeacoffee.com/stuartbinnz" target="_blank" class="btn btn-coffee">☕ Buy Me a Coffee</a>
             </div>
         </div>
 
-        <div class="footer">
-            Developed by Stu1958 • Specifically for ESP32-CYD (2.8" Touchscreen)
-        </div>
+        <div class="footer">Developed by Stu1958 • Built for ESP32-CYD (2.8" Touchscreen)</div>
     </div>
 </body>
 </html>
