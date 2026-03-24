@@ -8,20 +8,20 @@
 ![Price: Free](https://img.shields.io/badge/Price-Free--to--use-green)
 ![Status: Stable](https://img.shields.io/badge/Status-Stable-orange)
 
-> **🚀 FREE COMMUNITY FIRMWARE** > A dedicated desk-side monitor for up to 8 miners. While the source code is private, this firmware is 100% free to use.
+> **🚀 FREE COMMUNITY FIRMWARE** > Stop checking your phone. Start monitoring your swarm. This dedicated desk-side monitor tracks up to 8 miners in real-time.
 
 ### 👉 [⚡ CLICK HERE TO INSTALL VIA WEB BROWSER](https://stu1958.github.io/miner-swarm-dashboard/)
 
 ---
 
-## ✨ Features
-- **Fleet Monitoring:** Track up to 8 miners simultaneously on one 2.8" touchscreen.
-- **Hardware Optimized:** Custom-built for the **Cheap Yellow Display (ESP32-CYD)**.
-- **Avalon Persistence:** Saves "Best Difficulty" stats to memory for Avalon Nano 3/3S.
-- **Dynamic Logic:** Automatically adjusts display layout based on the miner name.
+## ✨ Why Choose Miner Swarm Dashboard?
+- **Instant Awareness:** See exactly which miners are hashing and which are down with a single glance at your desk. 
+- **Standalone Convenience:** No PC or phone required. Once flashed, it lives on your desk as an always-on hardware monitor.
+- **Scalable Monitoring:** Flash multiple displays to keep a dashboard in every room of your house or office.
+- **Avalon Optimized:** Specifically designed to save "Best Difficulty" stats for Avalon Nano 3/3S—a feature not found in standard monitors.
 
 ## 📏 App Setup Naming
-**IMPORTANT:** When entering your miner names during the dashboard setup, please follow these rules to ensure the correct hardware logic is applied. Keep names to **8 characters or less**.
+**IMPORTANT:** When entering your miner names during the setup, follow these rules to ensure the correct hardware logic is applied. (8 characters max).
 
 | Target Hardware | App Name Requirement | Example |
 | :--- | :--- | :--- |
