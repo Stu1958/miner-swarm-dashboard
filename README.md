@@ -30,11 +30,16 @@
 | **N-Series (NX/NQ)** | Name must START with `NX` or `NQ` | `NX6_01` |
 | **Standard Bitaxe** | Any other standard name | `Baxe_01` |
 
+---
+
 ## ❤️ Support the Developer
 This firmware is provided free of charge. If it helps you manage your mining swarm, consider supporting future updates!
 
 - [☕ Buy Me a Coffee](https://buymeacoffee.com/stuartbinnz)
 - [💸 PayPal Donation](https://www.paypal.com/paypalme/stub1958)
+
+- ### 🔗 Related Projects
+* **[Avalon Nano Ultra Controller](https://github.com/Stu1958/Avalon-Nano-Ultra-Controller)** – The ultimate thermal watchdog and companion for your Avalon Nano 3/3S.
 
 ## ⚖️ Legal & Usage Policy
 **© 2026 Stu1958. All Rights Reserved.**
