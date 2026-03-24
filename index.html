@@ -6,7 +6,7 @@
     <title>Miner Swarm Dashboard | Web Installer</title>
     <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js"></script>
     <style>
-        :root { --accent: #f3ba2f; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --success: #238636; }
+        :root { --accent: #f3ba2f; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --success: #238636; --danger: #cf222e; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
         .container { max-width: 750px; width: 100%; }
         .header { text-align: center; padding: 30px 0 10px 0; }
@@ -22,7 +22,7 @@
         
         .benefit-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
         @media (max-width: 600px) { .benefit-list { grid-template-columns: 1fr; } }
-        .benefit-item { background: rgba(243, 186, 47, 0.05); border: 1px solid rgba(243, 186, 47, 0.1); padding: 15px; border-radius: 8px; font-size: 0.9rem; }
+        .benefit-item { background: rgba(243, 186, 47, 0.05); border: 1px solid rgba(243, 186, 47, 0.1); padding: 15px; border-radius: 8px; font-size: 0.85rem; }
         .benefit-item b { color: var(--accent); display: block; margin-bottom: 5px; }
 
         .contribution-card { background: linear-gradient(145deg, #161b22, #1c2128); border: 1px solid var(--accent); text-align: center; }
@@ -34,6 +34,9 @@
         .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px; }
         .rule-item { background: #0d1117; padding: 12px; border-radius: 8px; border: 1px solid #30363d; font-size: 0.85rem; }
         code { color: var(--accent); font-family: monospace; font-size: 1.05em; background: rgba(0,0,0,0.3); padding: 2px 4px; border-radius: 4px; }
+        
+        .legal-card { border: 1px solid var(--danger); background: rgba(207, 34, 46, 0.05); }
+        .legal-card h3 { color: var(--danger); margin-top: 0; margin-bottom: 10px; font-size: 1.1rem; }
         .footer { margin-top: 30px; font-size: 0.75rem; color: #8b949e; text-align: center; }
     </style>
 </head>
@@ -53,16 +56,16 @@
         <div class="card">
             <h3>🖥️ Why a Dedicated Dashboard?</h3>
             <div class="benefit-list">
-                <div class="benefit-item"><b>Instant Fleet View</b> See at a glance that all 8 miners are hashing without touching your phone.</div>
-                <div class="benefit-item"><b>Always-On Monitoring</b> No need to log into a PC or open a browser to check your status.</div>
-                <div class="benefit-item"><b>Multi-Room Support</b> Set one up in your office, kitchen, or workshop to keep an eye on the swarm anywhere.</div>
-                <div class="benefit-item"><b>Zero Latency</b> Real-time updates directly from your miners to your desk.</div>
+                <div class="benefit-item"><b>Instant Fleet View</b> See instantly that all 8 miners are working without touching your phone or PC.</div>
+                <div class="benefit-item"><b>Always-On Monitoring</b> Lives on your desk as a standalone hardware monitor—no logins required.</div>
+                <div class="benefit-item"><b>Multi-Room Support</b> Set one up in every room to monitor the swarm from anywhere in the house.</div>
+                <div class="benefit-item"><b>Zero Latency</b> Real-time updates delivered directly from your miners to the display.</div>
             </div>
         </div>
 
         <div class="card install-box">
             <h3>⚡ Instant Web Installer</h3>
-            <p>Flash your ESP32-CYD via USB. Hold <b>BOOT</b>, tap <b>RESET</b>, then click below to flash.</p>
+            <p>Connect your ESP32-CYD via USB. Hold <b>BOOT</b>, tap <b>RESET</b>, then click below to flash.</p>
             <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
         </div>
 
@@ -86,7 +89,17 @@
             </div>
         </div>
 
-        <div class="footer">Developed by Stu1958 • Built for ESP32-CYD (2.8" Touchscreen)</div>
+        <div class="card legal-card">
+            <h3>⚠️ Usage & Copyright</h3>
+            <p style="font-size: 0.8rem; margin: 0;">
+                © 2026 Stu1958. All rights reserved. <br><br>
+                This firmware is provided <b>strictly for personal, non-commercial use</b>. 
+                Redistributing this software as part of a paid hardware bundle (e.g., selling pre-flashed CYDs on eBay/Etsy) is <b>strictly prohibited</b>. 
+                Please report any unauthorized commercial listings.
+            </p>
+        </div>
+
+        <div class="footer">Developed by Stu1958 • Specifically for ESP32-CYD (2.8" Touchscreen)</div>
     </div>
 </body>
 </html>
