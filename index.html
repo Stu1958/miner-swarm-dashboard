@@ -1,41 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miner Swarm Dashboard | Web Installer</title>
     <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js"></script>
     <style>
-        body { font-family: sans-serif; background: #121212; color: white; text-align: center; padding: 50px; }
-        .card { background: #1e1e1e; padding: 20px; border-radius: 10px; border: 1px solid #333; max-width: 600px; margin: 20px auto; text-align: left; }
-        .warning { color: #f3ba2f; font-weight: bold; }
-        .install-btn { margin: 20px; }
-        a { color: #f3ba2f; text-decoration: none; font-weight: bold; }
+        :root { --accent: #f3ba2f; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --success: #238636; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .container { max-width: 750px; width: 100%; }
+        .header { text-align: center; padding: 40px 0; }
+        h1 { color: white; margin: 0; font-size: 2.5rem; letter-spacing: -1px; }
+        .badge-row { margin-top: 12px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .badge { color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.1); }
+        
+        .card { background: var(--card); border: 1px solid #30363d; border-radius: 12px; padding: 30px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+        .install-box { text-align: center; border: 2px solid var(--accent); position: relative; }
+        .install-box::before { content: "FIRMWARE FLASHER"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: black; padding: 2px 15px; font-size: 0.7rem; font-weight: bold; border-radius: 4px; }
+        
+        .contribution-card { background: linear-gradient(145deg, #161b22, #1c2128); border: 1px solid var(--accent); text-align: center; }
+        .contribution-card h3 { color: var(--accent); margin-top: 0; }
+        
+        .btn-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: all 0.2s; display: inline-flex; align-items: center; font-size: 0.9rem; }
+        .btn-paypal { background: #ffffff; color: #0070ba; border: 1px solid #0070ba; }
+        .btn-coffee { background: #ffdd00; color: #000000; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
+
+        .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
+        @media (max-width: 600px) { .rules-grid { grid-template-columns: 1fr; } }
+        .rule-item { background: #0d1117; padding: 15px; border-radius: 8px; border: 1px solid #30363d; font-size: 0.9rem; }
+        code { color: var(--accent); font-family: 'Courier New', Courier, monospace; font-size: 1.1em; background: rgba(0,0,0,0.3); padding: 2px 4px; border-radius: 4px; }
+        
+        .footer { margin-top: 40px; font-size: 0.8rem; color: #8b949e; text-align: center; }
     </style>
 </head>
 <body>
-    <h1>Miner Swarm Dashboard ⛏️</h1>
-    <p>Always-on monitoring for your mining fleet.</p>
+    <div class="container">
+        <div class="header">
+            <h1>Miner Swarm Dashboard ⛏️</h1>
+            <div class="badge-row">
+                <span class="badge" style="background: #238636;">100% Free Firmware</span>
+                <span class="badge" style="background: #8957e5;">Community Project</span>
+                <span class="badge" style="background: #218bff;">v1.1 Stable</span>
+            </div>
+        </div>
 
-    <div class="card">
-        <h3>⚡ One-Click Install</h3>
-        <p>1. Connect your CYD to USB.</p>
-        <p>2. Hold <b>BOOT</b>, press <b>RESET</b>, then release <b>BOOT</b>.</p>
-        <esp-web-install-button manifest="manifest.json" class="install-btn"></esp-web-install-button>
+        <div class="card install-box">
+            <h3>⚡ Instant Installation</h3>
+            <p>Connect your ESP32-CYD via USB. Hold <b>BOOT</b>, tap <b>RESET</b>, then click below to flash the swarm dashboard.</p>
+            <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+        </div>
+
+        <div class="card">
+            <h3>📏 Device Naming (8 Chars Max)</h3>
+            <p>The dashboard uses your miner's hostname to apply custom logic. Names are case-insensitive (Capitals OK!).</p>
+            <div class="rules-grid">
+                <div class="rule-item"><b>Avalon 3S:</b> Include <code>NANO</code> & <code>3S</code></div>
+                <div class="rule-item"><b>Avalon 3:</b> Include <code>NANO</code> & <code>3</code></div>
+                <div class="rule-item"><b>N-Series:</b> MUST start with <code>NX</code> or <code>NQ</code></div>
+                <div class="rule-item"><b>Bitaxe:</b> Use any other name (e.g. <code>RIG_01</code>)</div>
+            </div>
+        </div>
+
+        <div class="card contribution-card">
+            <h3>❤️ Support the Project</h3>
+            <p>This software is a labor of love for the mining community and is provided entirely for free. If this tool brings value to your operation, please consider a contribution.</p>
+            <div class="btn-group">
+                <a href="https://www.paypal.com/paypalme/stub1958" target="_blank" class="btn btn-paypal">Donate via PayPal</a>
+                <a href="https://buymeacoffee.com/stuartbinnz" target="_blank" class="btn btn-coffee">☕ Buy Me a Coffee</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            Developed by Stu1958 • Built for ESP32-2432S028R (CYD)
+        </div>
     </div>
-
-    <div class="card">
-        <h3>📏 Naming Rules (Capitals OK!)</h3>
-        <p class="warning">Max 8 Characters per name.</p>
-        <ul>
-            <li><b>Avalon Nano 3S:</b> Must contain <code>NANO</code> and <code>3S</code>[cite: 23, 24].</li>
-            <li><b>Avalon Nano 3:</b> Must contain <code>NANO</code> and <code>3</code>[cite: 24].</li>
-            <li><b>N-Series:</b> Must START with <code>NX</code> or <code>NQ</code>[cite: 23].</li>
-            <li><b>Others:</b> Standard Bitaxe logic[cite: 24].</li>
-        </ul>
-    </div>
-
-    <p>Support the project: 
-        <a href="https://www.paypal.com/paypalme/stub1958">PayPal</a> | 
-        <a href="https://buymeacoffee.com/stuartbinnz">Buy Me a Coffee</a>
-    </p>
 </body>
 </html>
