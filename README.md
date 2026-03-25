@@ -9,6 +9,13 @@
 ![Status: Stable](https://img.shields.io/badge/Status-Stable-orange)
 
 > **🚀 FREE COMMUNITY FIRMWARE** > Stop checking your phone. Start monitoring your swarm. This dedicated desk-side monitor tracks up to 8 miners in real-time.
+>
+> ## ❤️ Support the Developer
+This firmware is provided free of charge. If this is useful, consider supporting future updates and projects no amount too small!
+
+- [☕ Buy Me a Coffee](https://buymeacoffee.com/stuartbinnz)
+- [💸 PayPal Donation](https://www.paypal.com/paypalme/stub1958)
+
 
 ### 👉 [⚡ CLICK HERE TO INSTALL VIA WEB BROWSER](https://stu1958.github.io/miner-swarm-dashboard/)
 
@@ -32,11 +39,6 @@
 
 ---
 
-## ❤️ Support the Developer
-This firmware is provided free of charge. If it helps you manage your mining swarm, consider supporting future updates!
-
-- [☕ Buy Me a Coffee](https://buymeacoffee.com/stuartbinnz)
-- [💸 PayPal Donation](https://www.paypal.com/paypalme/stub1958)
 
 - ### 🔗 Related Projects
 * **[Avalon Nano Ultra Controller](https://github.com/Stu1958/Avalon-Nano-Ultra-Controller)** – The ultimate thermal watchdog and companion for your Avalon Nano 3/3S.
