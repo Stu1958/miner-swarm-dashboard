@@ -7,14 +7,13 @@
     <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js"></script>
     <style>
         :root { --accent: #f3ba2f; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.4; margin: 0; padding: 15px; display: flex; flex-direction: column; align-items: center; }
-        .container { max-width: 500px; width: 100%; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.4; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; justify-content: center; }
+        .container { max-width: 420px; width: 100%; }
         .header { text-align: center; padding: 10px 0; }
-        h1 { color: white; margin: 0; font-size: 1.5rem; letter-spacing: -1px; }
-        .preview-img { display: block; width: 100%; max-width: 180px; margin: 10px auto; border-radius: 8px; border: 1px solid #30363d; }
-        .card { background: var(--card); border: 1px solid #30363d; border-radius: 10px; padding: 12px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        code { color: var(--accent); font-family: monospace; background: rgba(0,0,0,0.3); padding: 1px 3px; border-radius: 3px; }
-        .footer { margin-top: 15px; font-size: 0.7rem; color: #8b949e; text-align: center; }
+        h1 { color: white; margin: 0; font-size: 1.6rem; letter-spacing: -1px; }
+        .preview-img { display: block; width: 100%; max-width: 200px; margin: 15px auto; border-radius: 10px; border: 1px solid #30363d; box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
+        .card { background: var(--card); border: 1px solid #30363d; border-radius: 12px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); text-align: center; }
+        .footer { margin-top: 20px; font-size: 0.75rem; color: #8b949e; text-align: center; }
     </style>
 </head>
 <body>
@@ -25,54 +24,31 @@
 
         <img src="dashboard-preview.jpg" alt="Preview" class="preview-img">
 
-        <div style="background: rgba(22, 27, 34, 0.8); border: 1px solid rgba(243, 186, 47, 0.4); border-radius: 10px; padding: 10px; margin-bottom: 12px; text-align: center;">
-            <h4 style="color: #f3ba2f; margin: 0 0 8px 0; font-size: 0.85rem;">❤️ Support the Project</h4>
-            <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+        <div style="background: rgba(22, 27, 34, 0.8); border: 1px solid rgba(243, 186, 47, 0.4); border-radius: 12px; padding: 15px; margin-bottom: 15px; text-align: center;">
+            <h4 style="color: #f3ba2f; margin: 0 0 10px 0; font-size: 0.9rem;">❤️ Support the Project</h4>
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
                 <a href="https://buymeacoffee.com/stuartbinnz" target="_blank" 
-                   style="background: #ffdd00; color: #000000; text-decoration: none; font-weight: bold; font-size: 0.7rem; padding: 5px 12px; border-radius: 5px; display: inline-block;">
+                   style="background: #ffdd00; color: #000000; text-decoration: none; font-weight: bold; font-size: 0.75rem; padding: 8px 16px; border-radius: 6px; display: inline-block;">
                    ☕ Coffee
                 </a>
                 <a href="https://www.paypal.com/paypalme/stub1958" target="_blank" 
-                   style="background: #ffffff; color: #0070ba; text-decoration: none; font-weight: bold; font-size: 0.7rem; padding: 5px 12px; border-radius: 5px; border: 1px solid #0070ba; display: inline-block;">
+                   style="background: #ffffff; color: #0070ba; text-decoration: none; font-weight: bold; font-size: 0.75rem; padding: 8px 16px; border-radius: 6px; border: 1px solid #0070ba; display: inline-block;">
                    💸 PayPal
                 </a>
             </div>
-            <p style="font-size: 0.65rem; color: #8b949e; margin: 6px 0 0 0;">This firmware is free. Contributions help updates!</p>
+            <p style="font-size: 0.7rem; color: #8b949e; margin: 10px 0 0 0;">This firmware is free. Contributions help updates!</p>
         </div>
 
-        <div class="card" style="text-align: center; border-color: #58a6ff;">
-            <h3 style="margin: 0 0 5px 0; font-size: 1rem; color: #58a6ff;">⚡ Web Installer</h3>
-            <p style="font-size: 0.8rem; margin-bottom: 10px;">Connect USB. Hold <b>BOOT</b>, tap <b>RESET</b>.</p>
+        <div class="card" style="border-color: #58a6ff;">
+            <h3 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #58a6ff;">⚡ Instant Web Installer</h3>
+            <p style="font-size: 0.85rem; margin-bottom: 15px;">Connect your ESP32-CYD via USB.<br>Hold <b>BOOT</b>, tap <b>RESET</b>, then flash.</p>
             <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
         </div>
 
-        <div class="card" style="text-align: center; border-color: #f3ba2f; padding: 10px;">
-            <h4 style="margin: 0; font-size: 0.85rem;">📦 Want a Pre-Built Unit?</h4>
-            <a href="https://www.ebay.co.uk/itm/206164159288" target="_blank" 
-               style="background: #f3ba2f; color: #000; padding: 6px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; font-size: 0.8rem; margin-top: 5px;">
-               🛒 View on eBay (UK Only)
-            </a>
+        <div class="footer">
+            © 2026 Stu1958 • Specifically for ESP32-CYD<br>
+            <a href="https://github.com/Stu1958/miner-swarm-dashboard" style="color: #58a6ff; text-decoration: none; font-size: 0.8rem;">← Back to GitHub for Setup Guide</a>
         </div>
-
-        <div class="card" style="padding: 12px; background: rgba(0,0,0,0.2);">
-            <h4 style="margin: 0 0 8px 0; font-size: 0.85rem; color: #f3ba2f; text-align: center;">📏 App Setup Naming (8 Chars Max)</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.7rem; text-align: left;">
-                <div style="background: #0d1117; padding: 6px; border-radius: 4px; border: 1px solid #30363d;">
-                    <b>Avalon 3S:</b> <code>NANO</code> & <code>3S</code>
-                </div>
-                <div style="background: #0d1117; padding: 6px; border-radius: 4px; border: 1px solid #30363d;">
-                    <b>Avalon 3:</b> <code>NANO</code> & <code>3</code>
-                </div>
-                <div style="background: #0d1117; padding: 6px; border-radius: 4px; border: 1px solid #30363d;">
-                    <b>N-Series:</b> <code>NX</code> or <code>NQ</code>
-                </div>
-                <div style="background: #0d1117; padding: 6px; border-radius: 4px; border: 1px solid #30363d;">
-                    <b>Bitaxe:</b> Any name
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">© 2026 Stu1958 • Specifically for ESP32-CYD (2.8" Touchscreen)</div>
     </div>
 </body>
 </html>
