@@ -15,7 +15,7 @@ This firmware is provided free of charge. If this is useful, consider supporting
 
 - [☕ Buy Me a Coffee](https://buymeacoffee.com/stuartbinnz)
 - [💸 PayPal Donation](https://www.paypal.com/paypalme/stub1958)
-### 📦 [🛒 BUY A PRE-BUILT UNIT ON EBAY (UK ONLY)](https://www.ebay.co.uk/itm/206164159288)
+### 📦 [🛒 BUY A PRE-BUILT UNIT ON EBAY (UK ONLY)](https://www.ebay.co.uk/itm/206165825521)
 *Hand-assembled, 3D printed case, and pre-flashed by the developer.*
 
 ### 👉 [⚡ CLICK HERE TO INSTALL VIA WEB BROWSER](https://stu1958.github.io/miner-swarm-dashboard/)
