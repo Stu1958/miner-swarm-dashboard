@@ -6,87 +6,58 @@
     <title>Miner Swarm Dashboard | Web Installer</title>
     <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js"></script>
     <style>
-        :root { --accent: #f3ba2f; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --success: #238636; --danger: #cf222e; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        .container { max-width: 650px; width: 100%; }
-        .header { text-align: center; padding: 20px 0 10px 0; }
-        h1 { color: white; margin: 0; font-size: 1.8rem; letter-spacing: -1px; }
-        .badge-row { margin-top: 5px; display: flex; justify-content: center; gap: 8px; }
-        .badge { color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: bold; text-transform: uppercase; }
-        .preview-img { display: block; width: 100%; max-width: 220px; margin: 10px auto; border-radius: 8px; border: 1px solid #30363d; }
-        .card { background: var(--card); border: 1px solid #30363d; border-radius: 10px; padding: 15px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        
-        /* SLIM Support Card */
-        .contribution-card { border: 1px solid rgba(243, 186, 47, 0.3); text-align: center; background: rgba(22, 27, 34, 0.5); }
-        .btn-group { display: flex; gap: 10px; justify-content: center; margin-top: 10px; }
-        .btn { padding: 6px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.75rem; display: inline-flex; align-items: center; }
-        .btn-paypal { background: #ffffff; color: #0070ba; }
-        .btn-coffee { background: #ffdd00; color: #000000; }
-
-        /* SLIM eBay Card */
-        .ebay-card { border: 1px solid var(--accent); text-align: center; }
-        .btn-ebay { background: var(--accent); color: #000; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block; font-size: 0.85rem; margin-top: 5px; }
-
-        .install-box { text-align: center; border: 1px solid #58a6ff; }
-        .benefit-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.8rem; }
-        @media (max-width: 500px) { .benefit-list { grid-template-columns: 1fr; } }
-        .benefit-item b { color: var(--accent); }
-        
-        .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; font-size: 0.8rem; }
-        .rule-item { background: #0d1117; padding: 10px; border-radius: 6px; border: 1px solid #30363d; }
-        code { color: var(--accent); font-family: monospace; background: rgba(0,0,0,0.3); padding: 1px 3px; border-radius: 3px; }
-        .footer { margin-top: 20px; font-size: 0.7rem; color: #8b949e; text-align: center; }
+        :root { --accent: #f3ba2f; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.4; margin: 0; padding: 15px; display: flex; flex-direction: column; align-items: center; }
+        .container { max-width: 500px; width: 100%; }
+        .header { text-align: center; padding: 10px 0; }
+        h1 { color: white; margin: 0; font-size: 1.5rem; letter-spacing: -1px; }
+        .preview-img { display: block; width: 100%; max-width: 180px; margin: 10px auto; border-radius: 8px; border: 1px solid #30363d; }
+        .card { background: var(--card); border: 1px solid #30363d; border-radius: 10px; padding: 12px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .footer { margin-top: 15px; font-size: 0.7rem; color: #8b949e; text-align: center; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Miner Swarm Dashboard ⛏️</h1>
-            <div class="badge-row">
-                <span class="badge" style="background: #238636;">Free Firmware</span>
-                <span class="badge" style="background: #218bff;">v1.1 Stable</span>
-            </div>
         </div>
 
         <img src="dashboard-preview.jpg" alt="Preview" class="preview-img">
 
-        <div class="card contribution-card">
-            <h4 style="color: var(--accent); margin: 0; font-size: 0.9rem;">❤️ Support the Project</h4>
-            <div class="btn-group">
-                <a href="https://buymeacoffee.com/stuartbinnz" target="_blank" class="btn btn-coffee">☕ Coffee</a>
-                <a href="https://www.paypal.com/paypalme/stub1958" target="_blank" class="btn btn-paypal">💸 PayPal</a>
+        <div style="background: rgba(22, 27, 34, 0.8); border: 1px solid rgba(243, 186, 47, 0.4); border-radius: 10px; padding: 10px; margin-bottom: 12px; text-align: center;">
+            <h4 style="color: #f3ba2f; margin: 0 0 8px 0; font-size: 0.85rem;">❤️ Support the Project</h4>
+            <div style="display: flex; gap: 8px; justify-content: center;">
+                <a href="https://buymeacoffee.com/stuartbinnz" target="_blank" 
+                   style="background: #ffdd00; color: #000000; text-decoration: none; font-weight: bold; font-size: 0.7rem; padding: 5px 12px; border-radius: 5px;">
+                   ☕ Coffee
+                </a>
+                <a href="https://www.paypal.com/paypalme/stub1958" target="_blank" 
+                   style="background: #ffffff; color: #0070ba; text-decoration: none; font-weight: bold; font-size: 0.7rem; padding: 5px 12px; border-radius: 5px; border: 1px solid #0070ba;">
+                   💸 PayPal
+                </a>
             </div>
-            <p style="font-size: 0.7rem; color: #8b949e; margin: 8px 0 0 0;">This firmware is free. Contributions keep the updates coming!</p>
+            <p style="font-size: 0.65rem; color: #8b949e; margin: 6px 0 0 0;">This firmware is free. Contributions help updates!</p>
         </div>
 
-        <div class="card">
-            <div class="benefit-list">
-                <div class="benefit-item"><b>Fleet View:</b> Monitor 8 miners instantly.</div>
-                <div class="benefit-item"><b>Always-On:</b> Standalone desk monitor.</div>
-            </div>
-        </div>
-
-        <div class="card install-box">
-            <h3 style="margin-top:0; font-size: 1.1rem;">⚡ Web Installer</h3>
-            <p style="font-size: 0.85rem;">Connect ESP32-CYD via USB. Hold <b>BOOT</b>, tap <b>RESET</b>.</p>
+        <div class="card" style="text-align: center; border-color: #58a6ff;">
+            <h3 style="margin: 0 0 5px 0; font-size: 1rem; color: #58a6ff;">⚡ Web Installer</h3>
+            <p style="font-size: 0.8rem; margin-bottom: 10px;">Connect USB. Hold <b>BOOT</b>, tap <b>RESET</b>.</p>
             <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
         </div>
 
-        <div class="card ebay-card">
-            <h4 style="margin: 0; font-size: 0.9rem;">📦 Want a Pre-Built Unit?</h4>
-            <p style="font-size: 0.75rem; margin: 5px 0;">Hand-assembled with a 3D printed case.</p>
-            <a href="https://www.ebay.co.uk/itm/206164159288" target="_blank" class="btn-ebay">🛒 View on eBay (UK)</a>
+        <div class="card" style="text-align: center; border-color: #f3ba2f;">
+            <h4 style="margin: 0; font-size: 0.85rem;">📦 Want a Pre-Built Unit?</h4>
+            <a href="https://www.ebay.co.uk/itm/206164159288" target="_blank" 
+               style="background: #f3ba2f; color: #000; padding: 6px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; font-size: 0.8rem; margin-top: 5px;">
+               🛒 View on eBay (UK Only)
+            </a>
         </div>
 
-        <div class="card">
-            <h4 style="margin-top:0; font-size: 0.9rem;">📏 Naming Rules (8 Chars)</h4>
-            <div class="rules-grid">
-                <div class="rule-item"><b>Avalon 3S:</b> <code>NANO</code> + <code>3S</code></div>
-                <div class="rule-item"><b>N-Series:</b> Start <code>NX</code> / <code>NQ</code></div>
-            </div>
+        <div class="card" style="font-size: 0.75rem; padding: 10px;">
+            <p style="margin: 0;"><b>Naming:</b> Avalon 3S (<code>NANO 3S</code>) | N-Series (Start <code>NX/NQ</code>)</p>
         </div>
 
-        <div class="footer">© 2026 Stu1958 • Specifically for ESP32-CYD</div>
+        <div class="footer">© 2026 Stu1958 • ESP32-CYD (2.8" Touchscreen)</div>
     </div>
 </body>
 </html>
