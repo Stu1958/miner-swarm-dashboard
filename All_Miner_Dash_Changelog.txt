@@ -1,0 +1,6 @@
+05/04/26
+Latest Updates
+DIFF column now alternates between Best session difficulty and best all time difficulty with the top miner value highlighted in gold.
+Both difficulty columns are now shown on the web portal status page.
+
+Uptime column (Up) now alternates with Efficiency J/TH for each miner. The most efficient value is highlighted in gold.
