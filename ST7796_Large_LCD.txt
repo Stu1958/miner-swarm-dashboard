@@ -6,7 +6,10 @@
 
 3. Use minimum settings for successful boot. Set WiFi name and password and add one miner name and IP address. Ignore other settings and save
 
-4. CYD screen will still be scrambled but it will have booted so you can connect to its web portal. You will need its IP address which is displayed on the main title line for a few seconds after a restart. It is likely to be inverted/mirror image but for your own network you only need to read the last number. Use a mirror or decipher last number and enter the IP into a browser.
+4. CYD screen will still be scrambled but it will have booted so you can connect to its web portal. 
+You will need its IP address which is displayed on the main title line for a few seconds after a restart. 
+It is likely to be inverted/mirror image but for your own network you only need to read the last number. 
+Use a mirror or decipher last number and enter the full IP into a browser.
 
 5. Once you are in the web portal use the updater and flash the ST7796_4inch_LCD.bin file from the Repo.
 
