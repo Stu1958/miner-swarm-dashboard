@@ -1,3 +1,7 @@
+23/04/26
+3_4_inch_with_cost.bin  latest updates for the the 3.5in and 4in CYD includes energy costs
+2_8_inch_latest.bin latest updates for the the original 2.8in CYD includes energy costs
+
 05/04/26
 Latest Updates
 DIFF column now alternates between Best session difficulty and best all time difficulty with the top miner value highlighted in gold.
