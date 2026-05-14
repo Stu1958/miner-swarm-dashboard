@@ -1,3 +1,6 @@
+14/05/2026
+2_8Update.bin  3_5Update.bin  2.8inch and 3.5/4inch updates improved touch lcd off / lcd on
+
 23/04/26
 3_4_inch_with_cost.bin  latest updates for the the 3.5in and 4in CYD includes energy costs
 2_8_inch_latest.bin latest updates for the the original 2.8in CYD includes energy costs
