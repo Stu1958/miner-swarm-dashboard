@@ -1,3 +1,5 @@
+15/05/2026
+2_8Update.bin Improved column spacing for 2.8inch allows 4 digits for Avalon Q power
 14/05/2026
 2_8Update.bin  3_5Update.bin  2.8inch and 3.5/4inch updates improved touch lcd off / lcd on
 
